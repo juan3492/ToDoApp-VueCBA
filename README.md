@@ -1,5 +1,7 @@
 # workshop-vuecba
 
+wanna try?: https://juan3492.github.io/ToDoApp-VueCBA/
+
 ## Project setup
 ```
 npm install
