@@ -22,7 +22,7 @@
   </div>
 </template>
 
-<script>
+<script>  
 import 'nes.css/css/nes.min.css';
 import Task from './components/Task';
 import Form from './components/Form';

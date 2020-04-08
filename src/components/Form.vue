@@ -19,7 +19,7 @@ export default {
       currTask: '',
       showError: false,
     };
-  },
+  }, 
   methods: {
     post() {
       if (this.currTask !== '') {
