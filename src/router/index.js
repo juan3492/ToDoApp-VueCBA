@@ -1,22 +1,33 @@
-import Vue from "vue";
-import VueRouter from "vue-router";
-import Tasks from "../views/Tasks"
-
+import Vue from 'vue';
+import VueRouter from 'vue-router';
+import Tasks from '../views/Tasks';
+import Login from '../views/Login';
+import Register from "../views/Register";
 
 Vue.use(VueRouter);
 
 const routes = [
   {
-    path: "/",
-    name: "tasks",
-    component: Tasks
+    path: '/',
+    name: 'tasks',
+    component: Tasks,
+  },
+  {
+    path: '/login',
+    name: 'login',
+    component: Login,
+  },
+  {
+    path: '/register',
+    name: 'register',
+    component: Register,
   }
 ];
 
 const router = new VueRouter({
-  mode: "history",
+  mode: 'history',
   base: process.env.BASE_URL,
-  routes
+  routes,
 });
 
 export default router;

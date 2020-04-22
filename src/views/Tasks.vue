@@ -1,6 +1,7 @@
 <template>
   <div class="app">
-    <Form 
+    <Header />    
+    <TaskForm 
       v-on:post="addTask($event)" />
     <br />
 
@@ -22,14 +23,16 @@ import 'nes.css/css/nes.min.css';
 //import db from './main.js'
 
 import Task from '../components/Task';
-import Form from '../components/Form';
+import TaskForm from '../components/TaskForm';
+import Header from '../components/Header';
 
 
 export default {
   name: 'App',
   components: {
-    Form,
     Task,
+    TaskForm,
+    Header
   },
   data() {
     return {

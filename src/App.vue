@@ -1,10 +1,5 @@
 <template>
-  <div>
-    <header class="container">
-      <span class="h3">TODO App</span>
-      <span>-</span>
-      <span class="nes-text is-error">Primera etapa</span>
-    </header>
+  <div class="content">
     <router-view />
   </div>
 
@@ -14,6 +9,9 @@
 
 </script>
 
-<style>
 
+<style>
+    html, body, .content{
+     height: 100%;
+    }
 </style>
