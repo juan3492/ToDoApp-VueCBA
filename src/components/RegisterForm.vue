@@ -16,6 +16,7 @@
         <label>Confirmar Contraseña</label>
         <input type="Password" class="nes-input" v-model="repeatpassword" />
       </div>
+      <br>
        <button type="submit" class="nes-btn is-primary">Registrarme</button>
     </form>
   </div>

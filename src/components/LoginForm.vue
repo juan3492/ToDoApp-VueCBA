@@ -11,6 +11,7 @@
         <label>Contraseña</label>
         <input type="Password" class="nes-input" v-model="password" />
       </div>
+      <br>
       <button type="submit" class="nes-btn is-primary">Ingresar</button>
     </form>
   </div>

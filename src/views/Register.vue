@@ -12,6 +12,8 @@
 import RegisterForm from '@/components/RegisterForm.vue';
 import Header from "@/components/Header";
 import Error from '@/components/Error';
+
+import firebase from 'firebase';
     export default {
       components: {
         RegisterForm,
@@ -25,9 +27,14 @@ import Error from '@/components/Error';
           }else if(data.password !== data.repeatpassword){
             this.$refs.error.showError('Las contraseñas no coinciden. eeehhh digo "chaaaarmander"')
           }else{
-            console.log('todo piola');
             this.$refs.error.show = false
-
+            firebase.auth().createUserWithEmailAndPassword(data.email, data.password)
+              .then(user =>{
+                console.log(user.email)
+                this.$router.push({name: 'login'})
+              }).catch(err =>{
+                this.$refs.error.showError(err.message + '. ehhh digo "charmmmm"')
+              })
           }
         }
       }
