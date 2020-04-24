@@ -3,7 +3,7 @@
   <a class="navbar-brand" href="#">
     <span class="h3">TODO App</span>
     <span> - </span>
-    <span class="nes-text is-error">Segunda etapa</span>
+    <span class="nes-text is-success">Segunda etapa</span>
     <span v-if="user"> - Bienvenido {{ user.email }} </span>
   </a>
 

@@ -12,10 +12,10 @@
         <div class="row">
           <div class="col-md-11">
             <label v-if="!Task.edit">
-              <input type="checkbox" class="nes-checkbox" v-model="Task.complete" />
+              <input type="checkbox" class="nes-checkbox" v-model="Task.complete" v-on:change="complete" />
               <span>Completada?</span>
             </label>
-            <button class="nes-btn is-warning" v-else @click="Task.edit=false">Terminar de editar</button>
+            <button class="nes-btn is-warning" v-else @click="edit">Terminar de editar</button>
           </div>
           <div class="col">
             <button class="nes-btn is-error" @click="remove">x</button>
@@ -36,6 +36,13 @@ export default {
     },
   },
   methods: {
+    complete(){
+       this.$emit('complete');
+    },
+    edit(){
+      this.Task.edit = false
+      this.$emit('edit');
+    },
     remove() {
       this.$emit('remove');
     },
