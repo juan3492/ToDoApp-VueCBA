@@ -28,10 +28,9 @@ import firebase from 'firebase';
             this.$refs.error.showError('Las contraseñas no coinciden. eeehhh digo "chaaaarmander"')
           }else{
             this.$refs.error.show = false
-            firebase.auth().createUserWithEmailAndPassword(data.email, data.password)
-              .then(user =>{
-                console.log(user.email)
-                this.$router.push({name: 'login'})
+             firebase.auth().createUserWithEmailAndPassword(data.email, data.password)
+              .then(() =>{
+                this.$router.push({name: 'tasks'})
               }).catch(err =>{
                 this.$refs.error.showError(err.message + '. ehhh digo "charmmmm"')
               })
